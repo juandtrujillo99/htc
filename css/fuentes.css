@@ -1,0 +1,27 @@
+@font-face{font-family: "anton";src: url(font-folder/anton.ttf);}
+
+#antonBlack{font-family: "anton";}
+
+
+
+@font-face{font-family: "edo";src: url(font-folder/edo.ttf);}
+
+#edo{font-family: "edo";}
+
+
+
+@font-face{font-family: "notoBold";src: url(font-folder/noto/NotoSans-Bold.ttf);}
+
+#notoBold{font-family: "notoBold";}
+
+
+
+@font-face{font-family: "noto";src: url(font-folder/noto/NotoSans-Regular.ttf);}
+
+#noto{font-family: "noto";}
+
+
+
+
+
+
