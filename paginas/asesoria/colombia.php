@@ -107,16 +107,15 @@ include_once 'seccion/doc-navbar.inc.php';
 		    </div>
 		    <div id="standard" class="col-12 planBg">
 		      <?php $planName="standard"; $cantidad="192000"; $total="302000"; ?>
-		      <div class="ribbon ribbon-top-right"><span>AGOTADO</span></div>
-		      <div align="center" class="titlePlan <?php echo $agotado; ?>">
+		      <div align="center" class="titlePlan">
 		        <p class="textoBlack white-text textoTitulo1"><?php echo $planName; ?> training</p>
 		        <p class="textoBold textoSubtitulo1 textoColorMarca1a">Plan</p>
 		      </div>
-		      <div class="pricePlan <?php echo $agotado; ?>">
+		      <div class="pricePlan">
 		        <?php include "$divisa";?>
 		      </div>  
 		      <?php include 'seccion/asesoria/planDescription2.inc.php'; ?>
-		      <div class="buyPlan <?php echo $agotado; ?>">
+		      <div class="buyPlan">
 		        <div class="row">
 		            <div class="col-1"></div>
 		            <div class="col-10">
@@ -130,16 +129,15 @@ include_once 'seccion/doc-navbar.inc.php';
 		    </div>
 		    <div id="advanced" class="col-12 planBg">
 		      <?php $planName="advanced"; $cantidad="350000"; $total="420000"; ?>
-		      <div class="ribbon ribbon-top-right"><span>AGOTADO</span></div>
-		      <div align="center" class="titlePlan <?php echo $agotado; ?>">
+		      <div align="center" class="titlePlan">
 		        <p class="textoBlack white-text textoTitulo1"><?php echo $planName; ?> training</p>
 		        <p class="textoBold textoSubtitulo1 textoColorMarca1a">Plan</p>
 		      </div>
-		      <div class="pricePlan <?php echo $agotado; ?>">
+		      <div class="pricePlan">
 		        <?php include "$divisa";?>
 		      </div>  
 		      <?php include 'seccion/asesoria/planDescription3.inc.php'; ?>
-		      <div class="buyPlan <?php echo $agotado; ?>">
+		      <div class="buyPlan">
 		        <div class="row">
 		            <div class="col-1"></div>
 		            <div class="col-10">
