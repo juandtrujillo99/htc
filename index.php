@@ -53,7 +53,7 @@ if($partes_ruta[0] == 'htc'){
 		switch($partes_ruta[1]){
 
 
-			//asesoria
+			//asesoria landing page de introduccion
 			case 'asesoria':
 			$ruta_elegida = 'paginas/asesoria.php';
 			break;
