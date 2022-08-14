@@ -114,7 +114,7 @@ include_once 'seccion/doc-navbar.inc.php';
 		      <div class="pricePlan">
 		        <?php include "$divisa";?>
 		      </div>  
-		      <?php include 'seccion/asesoria/planDescription2.inc.php'; ?>
+		      <?php include 'seccion/asesoria/planDescription2.inc.php';?>
 		      <div class="buyPlan">
 		        <div class="row">
 		            <div class="col-1"></div>

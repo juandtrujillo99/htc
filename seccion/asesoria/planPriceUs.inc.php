@@ -11,7 +11,7 @@
         <li><a href="<?php echo RUTA_ASESORIA_COLOMBIA."#". $planName; ?>"><img src="<?php echo RUTA_IMG;?>bandera/co.png" class="imagen-2"> COP</a></li>
       </ul>
     </div>
-    <p align="center" class="col-7 textoBlack textoTitulo1">$<?php echo nl2br(number_format($cantidad,2)); ?></p>
+    <p align="center" class="col-7 textoBlack textoTitulo1">$<?php echo nl2br(number_format($cantidad,2));?></p>
     <p class="col-2 textoColorMarca" style="margin-top: 2em;">/<font class="textoBold">Mes</font></p>
     <?php
     $porcentaje = round($cantidad/$total*100);         

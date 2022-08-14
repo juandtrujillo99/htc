@@ -129,7 +129,7 @@ include_once 'seccion/doc-navbar.inc.php';
 		      </div>
 		    </div>
 		    <div id="advanced" class="col-12 planBg">
-		      <?php $planName="advanced"; $cantidad="64.99"; $total="135.99"; ?>
+		      <?php $planName="advanced"; $cantidad="64.99"; $total="135.99";?>
 		      <div align="center" class="titlePlan">
 		        <p class="textoBlack white-text textoTitulo1"><?php echo $planName; ?> training</p>
 		        <p class="textoBold textoSubtitulo1 textoColorMarca1a">Plan</p>

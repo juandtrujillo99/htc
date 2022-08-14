@@ -20,7 +20,7 @@
   <div class="col-2"></div>
   <div class="col-8">
     <p align="center"><b>Pesos colombianos</b></p>
-    <p align="center" class="discountPlan"><b><?php echo $porcentaje-100 ."% OFF"; ?></b></p>
+    <p align="center" class="discountPlan"><b><?php echo $porcentaje-100 ."% OFF";?></b></p>
   </div>
   <div class="col-2"></div>       
   <?php
