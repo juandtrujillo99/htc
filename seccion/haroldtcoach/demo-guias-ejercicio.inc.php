@@ -4,12 +4,12 @@
     <div class="anime-1 col-10 col-md-4">
         <br><br>                
         <div class="d-block d-sm-none">
-            <p itemprop="name" class="textoBlack textoTitulo">Guias para</p>
-            <p itemprop="disambiguatingDescription" class="textoBold textoColorMarca textoSubtitulo1">ejercitarse</p>
+            <p itemprop="name" class="textoBlack textoTitulo">Contenido</p>
+            <p itemprop="disambiguatingDescription" class="textoBold textoColorMarca textoSubtitulo1">Exclusivo</p>
         </div>
         <div class="d-none d-sm-block" align="center">
-            <p class="textoBlack textoTitulo1" style="font-size: 3.5em;">Guias para</p>
-            <p class="textoBold textoColorMarca textoSubtitulo1" style="font-size: 3em;">ejercitarse</p>
+            <p class="textoBlack textoTitulo1" style="font-size: 3.5em;">Contenido</p>
+            <p class="textoBold textoColorMarca textoSubtitulo1" style="font-size: 3em;">Exclusivo</p>
         </div>            
     </div>    
     <div class="col-1 col-md-4"></div>

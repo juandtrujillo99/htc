@@ -230,14 +230,14 @@ include_once 'seccion/cabecera-cierre.inc.php';
 				<div class="col-1"></div>
 				<div class="col-10 row">
 					<div class="col-md-6 col-12">
-						<p class="textoBlack textoTitulo">Guía de ejercicios</p>
+						<p class="textoBlack textoTitulo">Contenido exclusivo</p>
 					</div>
 					<div class="col-md-5 col-12">
 						<form role="form" id="busqueda-entrenamiento" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_ENTRENAMIENTO; ?>">
 							<div class="input-field" style="margin-top: 0;">
 								<i class="material-icons prefix">search</i>
 								<input type="text" id="autocomplete-input-entrenamiento" name="termino-buscar-entrenamiento" required>
-								<label for="autocomplete-input-entrenamiento">Busca el ejercicio que necesites aquí</label>					
+								<label for="autocomplete-input-entrenamiento">Buscar</label>					
 								<input type="hidden" name="buscar-entrenamiento">
 							</div>
 				        </form>	

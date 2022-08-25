@@ -2,13 +2,7 @@
 include_once 'app/entrenamiento/EscritorEntradas.inc.php';
 ?>
 
-<div class="row">
-	<div class="col-12">
-		<hr>
-		<h3 class="textoBold">Otros ejercicios</h3>
-		<br>
-	</div>
-	
+<div class="row">	
 	<?php
 		for ($i = 0; $i < count($entradas_azar); $i++) {
 			$entrada_actual = $entradas_azar[$i];

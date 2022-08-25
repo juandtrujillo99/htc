@@ -16,7 +16,7 @@ if (!ControlSesionAdmin::sesion_iniciada()) {
 	$admin = RepositorioAdmin :: obtener_admin_por_id(Conexion::obtener_conexion(), $id);
 }
 
-$titulo = "Gestor de ejercicios";
+$titulo = "Gestor de contenido exclusivo";
 
 include_once 'seccion/cabecera-inicio.inc.php';
 include_once 'scripts/formatoFecha.php';
