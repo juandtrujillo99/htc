@@ -23,7 +23,7 @@ if (isset($_POST['enviar'])) {
 	$validador = new ValidadorRegistro($_POST['nombre'], $_POST['apellido'], $_POST['email'], $_POST['clave1'], /*$_POST['clave2'], */
 		$_POST['fecha_nacimiento'], $_POST['pais'], $_POST['telefono'], $_POST['dieta'],
 		$_POST['objetivo'], $_POST['altura'], $_POST['peso'], $_POST['lugar_entreno'],
-		$_POST['restricciones'], $_POST['plan'], Conexion :: obtener_conexion());
+		$_POST['restricciones'], $_POST['plan'], $_POST['dias_entreno'], Conexion :: obtener_conexion());
 
 
 	if($validador -> registro_valido()){
@@ -41,7 +41,8 @@ if (isset($_POST['enviar'])) {
 			$validador-> obtener_peso(),
 			$validador-> obtener_lugar_entreno(),
 			$validador-> obtener_restricciones(),
-			$validador-> obtener_plan(),     
+			$validador-> obtener_plan(),
+			$validador-> obtener_dias_entreno(),     
 			'',
 			'');
 

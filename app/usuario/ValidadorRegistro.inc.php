@@ -30,6 +30,7 @@ class ValidadorRegistro{
 
 	private $restricciones;
 	private $plan;
+	private $dias_entreno;
 
 
 
@@ -53,10 +54,11 @@ class ValidadorRegistro{
 
 	private $error_restricciones;
 	private $error_plan;
+	private $error_dias_entreno;
 
 
 
-	public function __construct($nombre,$apellido,$email,$clave1,/*$clave2,*/$fecha_nacimiento,$pais,$telefono,$dieta,$objetivo,$altura,$peso,$lugar_entreno,$restricciones,$plan,$conexion){
+	public function __construct($nombre,$apellido,$email,$clave1,/*$clave2,*/$fecha_nacimiento,$pais,$telefono,$dieta,$objetivo,$altura,$peso,$lugar_entreno,$restricciones,$plan,$dias_entreno,$conexion){
 
 
 
@@ -80,6 +82,7 @@ class ValidadorRegistro{
 
 		$this -> restricciones = "";
 		$this -> plan = "";
+		$this -> dias_entreno = "";
 
 
 
@@ -111,6 +114,7 @@ class ValidadorRegistro{
 
 		$this -> error_restricciones = $this -> validar_restricciones($conexion, $restricciones);
 		$this -> error_plan = $this -> validar_plan($conexion, $plan);
+		$this -> error_dias_entreno = $this -> validar_dias_entreno($conexion, $dias_entreno);
 	}
 
 
@@ -326,6 +330,19 @@ class ValidadorRegistro{
 		return "";
 	}
 
+	private function validar_dias_entreno($conexion, $dias_entreno){
+		if(!$this -> variable_iniciada($dias_entreno)){
+			return "";
+		}
+		else {
+			$this -> dias_entreno = $dias_entreno;
+		}
+		if (!empty($dias_entreno) && strlen($dias_entreno) < 1) {
+			return "Este campo no puede estar vacio.";
+		}
+		return "";
+	}
+
 
 
 
@@ -348,6 +365,7 @@ class ValidadorRegistro{
 
 	public function obtener_restricciones(){return $this -> restricciones;}
 	public function obtener_plan(){return $this -> plan;}
+	public function obtener_dias_entreno(){return $this -> dias_entreno;}
 
 
 
@@ -379,6 +397,7 @@ class ValidadorRegistro{
 
 	public function obtener_error_restricciones(){return $this -> error_restricciones;}
 	public function obtener_error_plan(){return $this -> error_plan;}
+	public function obtener_error_dias_entreno(){return $this -> error_dias_entreno;}
 
 
 
@@ -564,6 +583,22 @@ class ValidadorRegistro{
 			echo $this -> aviso_inicio . $this -> error_plan . $this -> aviso_cierre;
 		}
 	}
+	
+	public function mostrar_dias_entreno(){
+		if ($this -> dias_entreno !== "") {
+			echo 'value="'. $this -> dias_entreno . '"';
+		}
+	}
+	public function mostrar_dias_entreno_seleccionado(){
+		if ($this -> dias_entreno !== "") {
+			echo $this -> dias_entreno;
+		}
+	}
+	public function mostrar_error_dias_entreno(){
+		if ($this -> error_dias_entreno !== "") {
+			echo $this -> aviso_inicio . $this -> error_dias_entreno . $this -> aviso_cierre;
+		}
+	}
 
 
 
@@ -586,7 +621,8 @@ class ValidadorRegistro{
 			$this -> error_peso === "" &&
 			$this -> error_lugar_entreno === "" &&
 			$this -> error_restricciones === "" &&
-			$this -> error_plan === "") {
+			$this -> error_plan === "" &&
+			$this -> error_dias_entreno === "") {
 			return true;
 	}
 		else{

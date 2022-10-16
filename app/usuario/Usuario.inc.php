@@ -29,12 +29,13 @@ class Usuario{
 
 	private $restricciones;
 	private $plan;
+	private $dias_entreno;
 	private $fecha_registro;
 	private $activo;
 
 
 
-	public function __construct($id, $nombre, $apellido, $email, $password, $fecha_nacimiento, $pais, $telefono, $dieta, $objetivo, $altura, $peso, $lugar_entreno, $restricciones, $plan, $fecha_registro, $activo){
+	public function __construct($id, $nombre, $apellido, $email, $password, $fecha_nacimiento, $pais, $telefono, $dieta, $objetivo, $altura, $peso, $lugar_entreno, $restricciones, $plan, $dias_entreno, $fecha_registro, $activo){
 
 		$this -> id = $id;
 		$this -> nombre = $nombre;
@@ -57,6 +58,7 @@ class Usuario{
 
 		$this -> restricciones = $restricciones;
 		$this -> plan = $plan;
+		$this -> dias_entreno = $dias_entreno;
 		$this -> fecha_registro = $fecha_registro;
 		$this -> activo = $activo;
 
@@ -82,6 +84,7 @@ class Usuario{
 
 	public function obtener_restricciones(){return $this -> restricciones;}
 	public function obtener_plan(){return $this -> plan;}
+	public function obtener_dias_entreno(){return $this -> dias_entreno;}
 	public function obtener_fecha_registro(){return $this -> fecha_registro;}
 	public function esta_activo(){return $this -> activo;}
 

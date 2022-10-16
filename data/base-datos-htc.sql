@@ -154,6 +154,7 @@ CREATE TABLE usuarios (
 	lugar_entreno VARCHAR(25),
 	restricciones VARCHAR(255),
 	plan VARCHAR(25),
+	dias_entreno VARCHAR(25),
 	fecha_registro DATETIME NOT NULL,
 	activo TINYINT NOT NULL,
 	PRIMARY KEY (id)

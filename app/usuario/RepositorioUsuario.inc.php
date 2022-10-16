@@ -23,7 +23,7 @@ class RepositorioUsuario{
 							$fila['id'], $fila['nombre'], $fila['apellido'], $fila['email'], $fila['password'], 
 							$fila['fecha_nacimiento'], $fila['pais'], $fila['telefono'], $fila['dieta'],
 							$fila['objetivo'], $fila['altura'], $fila['peso'], $fila['lugar_entreno'],
-							$fila['restricciones'], $fila['plan'], $fila['fecha_registro'], $fila['activo']
+							$fila['restricciones'], $fila['plan'], $fila['dias_entreno'], $fila['fecha_registro'], $fila['activo']
 						);
 					}
 				} else{
@@ -64,7 +64,7 @@ class RepositorioUsuario{
 		$usuario_insertado = false;
 		if (isset($conexion)) {
 			try{
-				$sql = "INSERT INTO usuarios(nombre, apellido, email, password, fecha_nacimiento, pais, telefono, dieta, objetivo, altura, peso, lugar_entreno, restricciones, plan, fecha_registro, activo) VALUES(:nombre, :apellido, :email, :password, :fecha_nacimiento, :pais, :telefono, :dieta, :objetivo, :altura, :peso, :lugar_entreno, :restricciones, :plan, NOW(), 0)";
+				$sql = "INSERT INTO usuarios(nombre, apellido, email, password, fecha_nacimiento, pais, telefono, dieta, objetivo, altura, peso, lugar_entreno, restricciones, plan, dias_entreno, fecha_registro, activo) VALUES(:nombre, :apellido, :email, :password, :fecha_nacimiento, :pais, :telefono, :dieta, :objetivo, :altura, :peso, :lugar_entreno, :restricciones, :plan, :dias_entreno, NOW(), 0)";
 
 				$sentencia = $conexion -> prepare($sql);
 
@@ -82,6 +82,7 @@ class RepositorioUsuario{
 				$sentencia->bindParam(':lugar_entreno', $usuario -> obtener_lugar_entreno(), PDO::PARAM_STR);
 				$sentencia->bindParam(':restricciones', $usuario -> obtener_restricciones(), PDO::PARAM_STR);
 				$sentencia->bindParam(':plan', $usuario -> obtener_plan(), PDO::PARAM_STR);
+				$sentencia->bindParam(':dias_entreno', $usuario -> obtener_dias_entreno(), PDO::PARAM_STR);
 
 				$usuario_insertado = $sentencia -> execute();
 			}
@@ -211,6 +212,8 @@ class RepositorioUsuario{
 						
 						$resultado['restricciones'],
 						$resultado['plan'],
+						$resultado['dias_entreno'],
+
 						$resultado['fecha_registro'],
 						$resultado['activo']);
 				}
@@ -260,6 +263,8 @@ class RepositorioUsuario{
 						
 						$resultado['restricciones'],
 						$resultado['plan'],
+						$resultado['dias_entreno'],
+
 						$resultado['fecha_registro'],
 						$resultado['activo']);
 				}

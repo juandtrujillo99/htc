@@ -112,6 +112,16 @@
 			<label>Plan</label>
 			<?php $validador -> mostrar_error_plan();	?>
 		</div>	
+
+		<div class="input-field">
+			<select name="dias_entreno" id="dias_entreno" class="validate">
+				<option <?php $validador -> mostrar_dias_entreno()?>><?php $validador -> mostrar_dias_entreno_seleccionado()?></option>
+				<option value="3">3 Días</option>
+				<option value="5">5 Días</option>
+			</select>
+			<label>Días de entreno</label>
+			<?php $validador -> mostrar_error_días_entreno();	?>
+		</div>	
 		<button type="submit" id="boton" class="btn btn-secundario-animado" name="enviar">Registrar</button>	
 	</div>
 </div>
